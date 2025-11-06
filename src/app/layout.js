@@ -29,10 +29,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${figtree.className} antialiased bg-hero`}
+        className={`${figtree.className} antialiased`}
       >
-        <Navbar />
-        {children}
+        <div className="bg-hero-sm lg:bg-hero-lg">
+          <Navbar />
+          {children}
+        </div>
       </body>
     </html>
   );

@@ -27,12 +27,22 @@ body {
 
 
 
-.bg-hero {
+.bg-hero-lg {
   background-image: 
     linear-gradient(rgba(29, 29, 29, 0.5), rgba(20, 20, 20, 0.5)), /* black overlay with 50% opacity */
     url('/hero.JPG'); /* actual image */
   background-size: cover;             /* Cover entire area */
   background-position: center;        /* Center the image */
+  background-repeat: no-repeat;       /* Don’t repeat */
+  height: 100vh;                  /* Full viewport height */
+}
+
+.bg-hero-sm {
+  background-image: 
+    linear-gradient(rgba(29, 29, 29, 0.5), rgba(20, 20, 20, 0.5)), /* black overlay with 50% opacity */
+    url('/hero.JPG'); /* actual image */             /* Cover entire area */
+    background-size:cover;   
+  background-position: 60% 30%;       /* Center the image */
   background-repeat: no-repeat;       /* Don’t repeat */
   height: 100vh;                  /* Full viewport height */
 }
