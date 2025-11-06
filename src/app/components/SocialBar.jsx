@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function SocialBar() {
     return (
-        <div className=" flex flex-col items-end gap-4 p-8">
+        <div className="flex flex-col items-end gap-4 p-8 text-white absolute bottom-2 right-4">
             <a href="https://twitter.com" target="_blank" className="hover:text-blue-400 transition">
                 <Twitter size={24} />
             </a>

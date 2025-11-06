@@ -24,3 +24,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+.bg-hero {
+  background-image: url('/hero.JPG'); /* Make sure hero.JPG is in public/ */
+  background-size: cover;             /* Cover entire area */
+  background-position: center;        /* Center the image */
+  background-repeat: no-repeat;       /* Don’t repeat */
+  height: 100vh;                  /* Full viewport height */
+}

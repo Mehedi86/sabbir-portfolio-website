@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Roboto, Open_Sans } from "next/font/google";
+import { Geist, Geist_Mono, Figtree } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 
@@ -12,15 +12,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const roboto = Roboto({
-  weight: '400',
-  subsets: ['latin']
-})
 
-const openSans = Open_Sans({
-  weight: '400',
-  subsets: ['latin']
-})
+const figtree = Figtree({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--font-Figtree'
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -32,9 +29,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${roboto.className} antialiased`}
+        className={`${figtree.className} antialiased bg-hero`}
       >
-        <Navbar/>
+        <Navbar />
         {children}
       </body>
     </html>
