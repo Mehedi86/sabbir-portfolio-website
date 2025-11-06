@@ -28,7 +28,9 @@ body {
 
 
 .bg-hero {
-  background-image: url('/hero.JPG'); /* Make sure hero.JPG is in public/ */
+  background-image: 
+    linear-gradient(rgba(29, 29, 29, 0.5), rgba(20, 20, 20, 0.5)), /* black overlay with 50% opacity */
+    url('/hero.JPG'); /* actual image */
   background-size: cover;             /* Cover entire area */
   background-position: center;        /* Center the image */
   background-repeat: no-repeat;       /* Don’t repeat */

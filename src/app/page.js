@@ -7,7 +7,6 @@ import { ReactTyped } from "react-typed";
 export default function Home() {
   return (
     <div className="flex flex-col justify-center min-h-[calc(100vh-120px)] relative">
-      {/* <img src="/hero.JPG"/> */}
       <div className="flex justify-center items-center">
         <div className="flex flex-col space-y-4 text-white pb-46">
           <h1 className="text-7xl font-extrabold">Sabbir Ahmed</h1>
