@@ -30,7 +30,7 @@ body {
 .bg-hero-lg {
   background-image: 
     linear-gradient(rgba(29, 29, 29, 0.5), rgba(20, 20, 20, 0.5)), /* black overlay with 50% opacity */
-    url('/hero.JPG'); /* actual image */
+    url('/hero-2.JPG'); /* actual image */
   background-size: cover;             /* Cover entire area */
   background-position: center;        /* Center the image */
   background-repeat: no-repeat;       /* Don’t repeat */
@@ -40,9 +40,44 @@ body {
 .bg-hero-sm {
   background-image: 
     linear-gradient(rgba(29, 29, 29, 0.5), rgba(20, 20, 20, 0.5)), /* black overlay with 50% opacity */
-    url('/hero.JPG'); /* actual image */             /* Cover entire area */
+    url('/hero-2.JPG'); /* actual image */             /* Cover entire area */
     background-size:cover;   
   background-position: 60% 30%;       /* Center the image */
   background-repeat: no-repeat;       /* Don’t repeat */
   height: 100vh;                  /* Full viewport height */
+}
+
+/* title animation css */
+
+.loader {
+  position: relative;
+  width: 120px;
+  height: 6px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  width: 120px;
+  height: 3px;
+  background: #00b381; /* Green bars */
+}
+
+.dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #000;
+  border-radius: 50%;
+  left: 4px;
+  animation: moveDot 4s ease-in-out infinite alternate;
+}
+
+@keyframes moveDot {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(102px); }
 }

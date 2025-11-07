@@ -3,19 +3,21 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { FaBars, FaTimes } from "react-icons/fa"
+import AboutModal from './AboutModal'
 
 export default function Navbar() {
 
   const [menuOpen, setMenuOpen] = useState(false)
+  const [showAbout, setShowAbout] = useState(false)
 
   const navLinks = (
     <>
-      <li>Home</li>
-      <li>About</li>
-      <li>Resume</li>
-      <li>Portfolio</li>
-      <li>Blog</li>
-      <li>Contact</li>
+      <Link href="/">Home</Link>
+      <Link href="/" onClick={() => setShowAbout(true)}>About</Link>
+      <Link href="/">Resume</Link>
+      <Link href="/">Portfolio</Link>
+      <Link href="/">Blog</Link>
+      <Link href="/">Contact</Link>
     </>
   )
 
@@ -56,6 +58,7 @@ export default function Navbar() {
       >
         <ul className="flex flex-col gap-4">{navLinks}</ul>
       </div>
+      <AboutModal isOpen={showAbout} onClose={() => setShowAbout(false)} />
     </nav>
   )
 }
