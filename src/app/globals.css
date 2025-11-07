@@ -81,3 +81,25 @@ body {
   0% { transform: translateX(0); }
   100% { transform: translateX(102px); }
 }
+
+
+/* scrollbar configuration */
+
+/* 🌿 Light thin scrollbar style */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.185); /* light scrollbar */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
