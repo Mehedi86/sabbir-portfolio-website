@@ -10,10 +10,15 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [showAbout, setShowAbout] = useState(false)
 
+  const handleShowAbout = () => {
+    setShowAbout(true);
+    setMenuOpen(!menuOpen)
+  }
+
   const navLinks = (
     <>
       <Link href="/">Home</Link>
-      <Link href="/" onClick={() => setShowAbout(true)}>About</Link>
+      <Link href="/" onClick={() => handleShowAbout()}>About</Link>
       <Link href="/">Resume</Link>
       <Link href="/">Portfolio</Link>
       <Link href="/">Blog</Link>
