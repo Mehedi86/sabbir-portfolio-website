@@ -20,7 +20,7 @@ export default function Navbar() {
   )
 
   return (
-    <nav className='flex justify-between items-center px-12 py-8 text-stone-200 relative z-50'>
+    <nav className='flex justify-between items-center px-6 lg:px-12 py-4 lg:py-8 text-stone-200 relative z-50'>
       {/* left side Title name */}
       <div className='flex items-center gap-2'>
         <img src='/logo.jpg' className='w-10' />
