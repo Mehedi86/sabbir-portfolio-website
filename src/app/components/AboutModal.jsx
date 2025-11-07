@@ -46,7 +46,7 @@ export default function AboutModal({ isOpen, onClose }) {
                             {/* about me section  */}
                             <div className="mt-4 lg:mt-12 md:flex max-w-7xl mx-auto">
                                 {/* about me left  */}
-                                <img src="/about-photo.jpg" className="lg:w-4/12" alt="" />
+                                <img src="/about-photo.JPG" className="lg:w-4/12" alt="" />
                                 <div className="lg:pl-16 py-6">
                                     <div className="space-y-4">
                                         <p className="text-[#00b381] text-2xl font-semibold">Who am i?</p>
