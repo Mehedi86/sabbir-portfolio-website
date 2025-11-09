@@ -1,21 +1,27 @@
 'use client'
 
+import React, { useState } from 'react'
 import { motion, AnimatePresence } from "framer-motion"
-import { FaTimes } from "react-icons/fa"
-import { useEffect } from "react"
-import Title from "./Title"
+import { FaTimes } from 'react-icons/fa'
+import Title from '@/app/components/Title'
+import { useRouter } from 'next/navigation'
 
-export default function AboutModal({ isOpen, onClose }) {
-  // ✅ Preload image to prevent stutter
-  useEffect(() => {
-    const img = new Image()
-    img.src = "/about-photo.JPG"
-  }, [])
+export default function Page() {
+  const [showModal, setShowModal] = useState(true)
+  const router = useRouter()
+
+  const handleClose = () => {
+    setShowModal(false)
+    setTimeout(() => {
+      router.push('/') // navigate home after animation ends
+    }, 800)
+  }
 
   return (
     <AnimatePresence>
-      {isOpen && (
+      {showModal && (
         <motion.div
+          key="modal"
           className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm overflow-y-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -25,7 +31,7 @@ export default function AboutModal({ isOpen, onClose }) {
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 50, opacity: 0 }}
+            exit={{ y: 60, opacity: 0 }}
             transition={{
               duration: 1.5,
               ease: "easeOut",
@@ -35,19 +41,16 @@ export default function AboutModal({ isOpen, onClose }) {
           >
             {/* Close button */}
             <button
+              onClick={handleClose}
               className="absolute top-6 right-6 text-gray-400 hover:text-white"
-              onClick={onClose}
             >
               <FaTimes size={24} />
             </button>
 
             {/* Content */}
             <div>
-              <Title
-                title="Get to know me"
-                subTitle="About Me"
-              />
-              
+              <Title title="Get to know me" subTitle="About Me" />
+
               <div className="mt-4 lg:mt-12 md:flex max-w-7xl mx-auto">
                 <img
                   src="/about-photo.JPG"
