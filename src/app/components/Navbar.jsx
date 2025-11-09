@@ -19,7 +19,7 @@ export default function Navbar() {
     <>
       <Link href="/">Home</Link>
       <Link href="/" onClick={() => handleShowAbout()}>About</Link>
-      <Link href="/">Resume</Link>
+      <Link href="/resume">Resume</Link>
       <Link href="/">Portfolio</Link>
       <Link href="/">Blog</Link>
       <Link href="/">Contact</Link>
