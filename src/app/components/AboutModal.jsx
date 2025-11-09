@@ -2,8 +2,8 @@
 
 import { motion, AnimatePresence } from "framer-motion"
 import { FaTimes } from "react-icons/fa"
-import TitleAnimation from "./TitleAnimation"
 import { useEffect } from "react"
+import Title from "./Title"
 
 export default function AboutModal({ isOpen, onClose }) {
   // ✅ Preload image to prevent stutter
@@ -43,12 +43,11 @@ export default function AboutModal({ isOpen, onClose }) {
 
             {/* Content */}
             <div>
-              <div className="space-y-2">
-                <p className="text-lg text-stone-200 text-center">Get to know me</p>
-                <h1 className="text-4xl font-bold text-center">About Me</h1>
-                <TitleAnimation />
-              </div>
-
+              <Title
+                title="Get to know me"
+                subTitle="About Me"
+              />
+              
               <div className="mt-4 lg:mt-12 md:flex max-w-7xl mx-auto">
                 <img
                   src="/about-photo.JPG"

@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${figtree.className} antialiased`}
       >
-        <div className="bg-hero-sm lg:bg-hero-lg">
+        <div>
           <Navbar />
           {children}
         </div>

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #171717;
   --foreground: #171717;
 }
 
@@ -28,23 +28,33 @@ body {
 
 
 .bg-hero-lg {
-  background-image: 
-    linear-gradient(rgba(29, 29, 29, 0.5), rgba(20, 20, 20, 0.5)), /* black overlay with 50% opacity */
-    url('/hero-2.JPG'); /* actual image */
-  background-size: cover;             /* Cover entire area */
-  background-position: center;        /* Center the image */
-  background-repeat: no-repeat;       /* Don’t repeat */
-  height: 100vh;                  /* Full viewport height */
+  background-image:
+    linear-gradient(rgba(29, 29, 29, 0.5), rgba(20, 20, 20, 0.5)),
+    /* black overlay with 50% opacity */
+    url('/hero-2.JPG');
+  /* actual image */
+  background-size: cover;
+  /* Cover entire area */
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Don’t repeat */
+  height: screen;
 }
 
 .bg-hero-sm {
-  background-image: 
-    linear-gradient(rgba(29, 29, 29, 0.5), rgba(20, 20, 20, 0.5)), /* black overlay with 50% opacity */
-    url('/hero-2.JPG'); /* actual image */             /* Cover entire area */
-    background-size:cover;   
-  background-position: 60% 30%;       /* Center the image */
-  background-repeat: no-repeat;       /* Don’t repeat */
-  height: 100vh;                  /* Full viewport height */
+  background-image:
+    linear-gradient(rgba(29, 29, 29, 0.5), rgba(20, 20, 20, 0.5)),
+    /* black overlay with 50% opacity */
+    url('/hero-2.JPG');
+  /* actual image */
+  /* Cover entire area */
+  background-size: cover;
+  background-position: 60% 30%;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Don’t repeat */
+  height: screen;
 }
 
 /* title animation css */
@@ -64,7 +74,8 @@ body {
   content: "";
   width: 120px;
   height: 3px;
-  background: #00b381; /* Green bars */
+  background: #00b381;
+  /* Green bars */
 }
 
 .dot {
@@ -78,8 +89,13 @@ body {
 }
 
 @keyframes moveDot {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(102px); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(102px);
+  }
 }
 
 
@@ -91,7 +107,8 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.185); /* light scrollbar */
+  background-color: rgba(255, 255, 255, 0.185);
+  /* light scrollbar */
   border-radius: 10px;
 }
 
@@ -102,4 +119,3 @@ body {
 ::-webkit-scrollbar-track {
   background: transparent;
 }
-
