@@ -2,34 +2,19 @@
 
 import { motion, AnimatePresence } from "framer-motion"
 import { FaTimes } from "react-icons/fa"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import Title from "./Title"
 
 export default function AboutModal({ isOpen, onClose }) {
-  const [showModal, setShowModal] = useState(isOpen)
-
-  // Sync internal visibility with parent
-  useEffect(() => {
-    if (isOpen) setShowModal(true)
-  }, [isOpen])
-
   // ✅ Preload image to prevent stutter
   useEffect(() => {
     const img = new Image()
     img.src = "/about-photo.JPG"
   }, [])
 
-  // ✅ When closing, wait for animation to finish before unmount
-  const handleClose = () => {
-    setShowModal(false)
-    setTimeout(() => {
-      onClose?.()
-    }, 1000) // match with motion exit duration
-  }
-
   return (
     <AnimatePresence>
-      {showModal && (
+      {isOpen && (
         <motion.div
           className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm overflow-y-auto"
           initial={{ opacity: 0 }}
@@ -42,7 +27,7 @@ export default function AboutModal({ isOpen, onClose }) {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 50, opacity: 0 }}
             transition={{
-              duration: 1.5, // slightly shorter for snappier close
+              duration: 1.5,
               ease: "easeOut",
               delay: 0.1,
             }}
@@ -51,7 +36,7 @@ export default function AboutModal({ isOpen, onClose }) {
             {/* Close button */}
             <button
               className="absolute top-6 right-6 text-gray-400 hover:text-white"
-              onClick={handleClose}
+              onClick={onClose}
             >
               <FaTimes size={24} />
             </button>
@@ -62,7 +47,7 @@ export default function AboutModal({ isOpen, onClose }) {
                 title="Get to know me"
                 subTitle="About Me"
               />
-
+              
               <div className="mt-4 lg:mt-12 md:flex max-w-7xl mx-auto">
                 <img
                   src="/about-photo.JPG"
