@@ -42,7 +42,7 @@ export default function ResumePage({ isOpen = true }) {
               ease: 'easeOut',
               delay: 0.1,
             }}
-            className="min-h-[1200px] p-8 md:p-16 text-white bg-[#111] relative will-change-transform"
+            className="min-h-[1200px] p-2 lg:p-8 md:p-16 text-white bg-[#111] relative will-change-transform"
           >
             {/* Close button */}
             <button
@@ -55,6 +55,41 @@ export default function ResumePage({ isOpen = true }) {
             {/* Main content */}
             <div>
               <Title title="Check out my Resume" subTitle="Resume" />
+              <div className='max-w-6xl mx-auto mt-12'>
+                {/* left side */}
+                <div className='lg:w-1/2'>
+                  <h1 className='text-3xl font-semibold'>Education</h1>
+                  <div className='border-l-2 border-[#0b9f6b] mt-6 relative bg-neutral-900'>
+                    <div class="arrow-clip absolute top-8"></div>
+                    <div class="arrow-clip absolute top-58 md:top-52"></div>
+                    <div class="arrow-clip absolute top-108 md:top-96"></div>
+                    {/* left sec 1 */}
+                    <div className='px-12 py-6'>
+                      <h1 className='text-2xl'>Computer Science</h1>
+                      <div className='space-y-4 text-neutral-400 pt-2'>
+                        <p>Daffodil International University / 2021 - 2024</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.</p>
+                      </div>
+                    </div>
+                    {/* left sec 2 */}
+                    <div className='px-12 py-6 border-t border-neutral-800'>
+                      <h1 className='text-2xl'>Computer Science</h1>
+                      <div className='space-y-4 text-neutral-400 pt-2'>
+                        <p>Daffodil International University / 2021 - 2024</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.</p>
+                      </div>
+                    </div>
+                    {/* left sec 3 */}
+                    <div className='px-12 py-6 border-t border-neutral-800'>
+                      <h1 className='text-2xl'>Computer Science</h1>
+                      <div className='space-y-4 text-neutral-400 pt-2'>
+                        <p>Daffodil International University / 2021 - 2024</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
         </motion.div>
