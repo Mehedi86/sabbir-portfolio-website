@@ -60,9 +60,9 @@ export default function ResumePage({ isOpen = true }) {
                 <div className='lg:w-1/2'>
                   <h1 className='text-3xl font-semibold'>Education</h1>
                   <div className='border-l-2 border-[#0b9f6b] mt-6 relative bg-neutral-900'>
-                    <div class="arrow-clip absolute top-8"></div>
-                    <div class="arrow-clip absolute top-58 md:top-52"></div>
-                    <div class="arrow-clip absolute top-108 md:top-96"></div>
+                    <div className="arrow-clip absolute top-8"></div>
+                    <div className="arrow-clip absolute top-64 sm:top-58 md:top-52"></div>
+                    <div className="arrow-clip absolute top-120 sm:top-108 md:top-96"></div>
                     {/* left sec 1 */}
                     <div className='px-12 py-6'>
                       <h1 className='text-2xl'>Computer Science</h1>
