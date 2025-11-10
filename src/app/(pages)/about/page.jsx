@@ -1,82 +1,77 @@
 'use client'
 
-import React, { useState } from 'react'
-import { motion, AnimatePresence } from "framer-motion"
+import React, { useState, useEffect } from 'react'
 import { FaTimes } from 'react-icons/fa'
 import Title from '@/app/components/Title'
 import { useRouter } from 'next/navigation'
 
 export default function Page() {
-  const [showModal, setShowModal] = useState(true)
+  const [showWipe, setShowWipe] = useState(true)
   const router = useRouter()
 
   const handleClose = () => {
-    setShowModal(false)
-    setTimeout(() => {
-      router.push('/') // navigate home after animation ends
-    }, 800)
+    setShowWipe(true) // wipe down
+    setTimeout(() => router.push('/'), 1000)
   }
 
+  const handleImageLoad = () => {
+    setTimeout(() => setShowWipe(false), 100) // wipe up
+  }
+
+  useEffect(() => {
+    // fallback in case image is cached
+    const img = new Image()
+    img.src = '/about-photo.JPG'
+    img.onload = handleImageLoad
+  }, [])
+
   return (
-    <AnimatePresence>
-      {showModal && (
-        <motion.div
-          key="modal"
-          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm overflow-y-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-        >
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 60, opacity: 0 }}
-            transition={{
-              duration: 1.5,
-              ease: "easeOut",
-              delay: 0.1,
-            }}
-            className="min-h-[1200px] p-8 md:p-16 text-white bg-[#111] relative will-change-transform"
+    <>
+      {/* Overlay wipe animation */}
+      <div
+        className={`fixed inset-0 z-50 bg-black transition-transform duration-1000 ease-in-out ${
+          showWipe ? 'translate-y-0' : '-translate-y-full'
+        }`}
+      ></div>
+
+      {/* Main content */}
+      <div className="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm overflow-y-auto">
+        <div className="min-h-[1200px] p-8 md:p-16 text-white bg-[#111] relative">
+          <button
+            onClick={handleClose}
+            className="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors"
           >
-            {/* Close button */}
-            <button
-              onClick={handleClose}
-              className="absolute top-6 right-6 text-gray-400 hover:text-white"
-            >
-              <FaTimes size={24} />
-            </button>
+            <FaTimes size={24} />
+          </button>
 
-            {/* Content */}
-            <div>
-              <Title title="Get to know me" subTitle="About Me" />
+          <div>
+            <Title title="Get to know me" subTitle="About Me" />
 
-              <div className="mt-4 lg:mt-12 md:flex max-w-7xl mx-auto">
-                <img
-                  src="/about-photo.JPG"
-                  className="lg:w-4/12 rounded-xl object-cover"
-                  alt="About photo"
-                  loading="lazy"
-                />
-                <div className="lg:pl-16 py-6">
-                  <div className="space-y-4">
-                    <p className="text-[#00b381] text-2xl font-semibold">Who am I?</p>
-                    <h1 className="text-white text-4xl font-bold">
-                      I'm Sabbir Ahmed, a Digital marketer and Meta ads specialist
-                    </h1>
-                    <p className="text-gray-400">
-                      I am a freelancer based in the United Kingdom and I have been
-                      building noteworthy UX/UI designs and websites for years,
-                      which comply with the latest design trends...
-                    </p>
-                  </div>
-                  <div className="h-0.5 bg-neutral-600 my-12"></div>
+            <div className="mt-4 lg:mt-12 md:flex max-w-7xl mx-auto">
+              <img
+                src="/about-photo.JPG"
+                alt="About photo"
+                className="lg:w-4/12 rounded-xl object-cover"
+                onLoad={handleImageLoad}
+              />
+              <div className="lg:pl-16 py-6">
+                <div className="space-y-4">
+                  <p className="text-[#00b381] text-2xl font-semibold">Who am I?</p>
+                  <h1 className="text-white text-4xl font-bold">
+                    I'm Sabbir Ahmed, a Digital marketer and Meta ads specialist
+                  </h1>
+                  <p className="text-gray-400">
+                    I am a freelancer based in the United Kingdom and I have been
+                    building noteworthy UX/UI designs and websites for years,
+                    which comply with the latest design trends...
+                  </p>
                 </div>
+                <div className="h-0.5 bg-neutral-600 my-12"></div>
               </div>
             </div>
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+          </div>
+        </div>
+      </div>
+    </>
   )
 }

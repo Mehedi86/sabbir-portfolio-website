@@ -16,7 +16,7 @@ export default function Hero() {
                         <p className="text-center text-lg md:text-2xl lg:text-3xl">
                             I'm a{" "}
                             <ReactTyped
-                                strings={["Digital Marketer", "Designer", "Content Creator"]}
+                                strings={["Digital Marketer", "Meta ads specialist ", "Content Creator"]}
                                 typeSpeed={60}
                                 backSpeed={40}
                                 backDelay={2000}
