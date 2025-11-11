@@ -74,7 +74,7 @@ body {
   content: "";
   width: 120px;
   height: 3px;
-  background: #00b381;
+  background: #DCC5B2;
   /* Green bars */
 }
 
@@ -136,11 +136,11 @@ body {
 
 
 /* resume education and experience timeline */
-
+/* #0b9f6b */
 .arrow-clip {
   --h: 20px;
   --w: 30px;
-  --c: #0b9f6b;
+  --c: #DCC5B2;
   width: var(--w);
   height: var(--h);
   background: var(--c);

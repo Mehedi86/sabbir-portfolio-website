@@ -57,7 +57,7 @@ export default function Page() {
               />
               <div className="lg:pl-16 py-6">
                 <div className="space-y-4">
-                  <p className="text-[#00b381] text-2xl font-semibold">Who am I?</p>
+                  <p className="text-[#DCC5B2] text-2xl font-semibold">Who am I?</p>
                   <h1 className="text-white text-4xl font-bold">
                     I'm Sabbir Ahmed, a Digital marketer and Meta ads specialist
                   </h1>
@@ -72,7 +72,7 @@ export default function Page() {
                   <div className='md:flex'>
                     <div className='w-1/2 space-y-6'>
                       <h1>Name:<span className='text-neutral-400 pl-4'>Sabbir Ahmed</span></h1>
-                      <h1>Email:<span className='text-[#0b9f6b] pl-4'>sabbir89654@gmail.com</span></h1>
+                      <h1>Email:<span className='text-[#DCC5B2] pl-4'>sabbir89654@gmail.com</span></h1>
                     </div>
                     <div className='w-1/2 space-y-6 mt-4 md:mt-0 '>
                       <h1>Age:<span className='text-neutral-400 pl-4'>N/A</span></h1>
@@ -80,7 +80,7 @@ export default function Page() {
                     </div>
                   </div>
                   <div className='mt-10 md:flex space-y-6 md:space-y-0 justify-between items-center w-fit'>
-                    <Link href="/" className='px-8 py-2 rounded-3xl bg-[#0b9f6b]'>Download CV</Link>
+                    <Link href="/" className='px-8 py-2 rounded-3xl bg-[#DCC5B2]'>Download CV</Link>
                     <div className='border-t-2 border-neutral-600 w-20 mx-10'></div>
                     <div className="flex gap-4 text-neutral-400">
                       <a href="https://twitter.com" target="_blank" className="hover:text-blue-400 transition">
