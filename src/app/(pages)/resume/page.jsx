@@ -49,7 +49,7 @@ export default function ResumePage() {
               <div className="lg:w-1/2">
                 <h1 className="text-3xl font-semibold">Education</h1>
 
-                <div className="border-l-2 border-[#0b9f6b] mt-6 relative bg-neutral-900">
+                <div className="border-l-2 border-[#DCC5B2] mt-6 relative bg-neutral-900">
                   <div className="arrow-clip absolute top-8"></div>
                   <div className="arrow-clip absolute top-68 md:top-68 lg:top-52"></div>
                   <div className="arrow-clip absolute top-128 md:top-128 lg:top-96"></div>
@@ -92,7 +92,7 @@ export default function ResumePage() {
               <div className="lg:w-1/2 mt-12 lg:mt-0">
                 <h1 className="text-3xl font-semibold">Experience</h1>
 
-                <div className="border-l-2 border-[#0b9f6b] mt-6 relative bg-neutral-900">
+                <div className="border-l-2 border-[#DCC5B2] mt-6 relative bg-neutral-900">
                   <div className="arrow-clip absolute top-8"></div>
                   <div className="arrow-clip absolute top-68 md:top-68 lg:top-52"></div>
                   <div className="arrow-clip absolute top-128 md:top-128 lg:top-96"></div>

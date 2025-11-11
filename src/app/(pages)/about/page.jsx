@@ -80,7 +80,7 @@ export default function Page() {
                     </div>
                   </div>
                   <div className='mt-10 md:flex space-y-6 md:space-y-0 justify-between items-center w-fit'>
-                    <Link href="/" className='px-8 py-2 rounded-3xl bg-[#DCC5B2]'>Download CV</Link>
+                    <Link href="/" className='px-8 py-2 rounded-3xl bg-linear-to-l from-[#DCC5B2] to-transparent'>Download CV</Link>
                     <div className='border-t-2 border-neutral-600 w-20 mx-10'></div>
                     <div className="flex gap-4 text-neutral-400">
                       <a href="https://twitter.com" target="_blank" className="hover:text-blue-400 transition">

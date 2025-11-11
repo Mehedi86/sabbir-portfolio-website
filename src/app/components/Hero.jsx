@@ -3,6 +3,8 @@
 import React from 'react'
 import SocialBar from './SocialBar'
 import { ReactTyped } from "react-typed"
+import Link from 'next/link'
+import { FaCircleArrowRight } from "react-icons/fa6";
 
 export default function Hero() {
     return (
@@ -23,6 +25,17 @@ export default function Hero() {
                                 loop
                             />
                         </p>
+                        <div className="md:flex justify-center hidden">
+                            <Link
+                                href="/about"
+                                className="mt-2 text-sm capitalize p-1 md:p-2 flex items-center gap-4 
+               bg-linear-to-l from-[#DCC5B2] to-transparent text-white font-medium hover:scale-90 transform transition duration-300 ease-in-out
+               rounded-md"
+                            >
+                                Let's Explore More
+                                <FaCircleArrowRight className="text-white" size={22} />
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
