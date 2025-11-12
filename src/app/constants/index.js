@@ -75,3 +75,48 @@ export const services = [
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
   },
 ]
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "Ariana Patel",
+    role: "Project Manager",
+    company: "VisionEdge Solutions",
+    review: "An incredible tool that streamlined our workflow. The dashboard is clean, fast, and super intuitive!",
+  },
+  {
+    id: 2,
+    name: "Liam Anderson",
+    role: "Frontend Developer",
+    company: "CodeCrafters Studio",
+    review: "Love how smooth everything runs. The UI is responsive, and the overall experience feels premium.",
+  },
+  {
+    id: 3,
+    name: "Nora Williams",
+    role: "Freelance Designer",
+    company: "CreativeFlow",
+    review: "This platform helped me deliver client projects faster than ever. Beautiful design and great usability.",
+  },
+  {
+    id: 4,
+    name: "Ethan Walker",
+    role: "Data Analyst",
+    company: "Insight Analytics",
+    review: "The insights I get from this are just outstanding. It has boosted my productivity significantly.",
+  },
+  {
+    id: 5,
+    name: "Clara Nguyen",
+    role: "Startup Founder",
+    company: "Nova Labs",
+    review: "A must-have platform for any growing business. I’ve seen a noticeable improvement in efficiency.",
+  },
+  {
+    id: 6,
+    name: "Benjamin Scott",
+    role: "Content Strategist",
+    company: "ThinkForward Media",
+    review: "Easy to use, reliable, and well-supported. It’s now part of my daily routine at work.",
+  }
+];

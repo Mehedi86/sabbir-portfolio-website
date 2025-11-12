@@ -6,6 +6,7 @@ import Title from '@/app/components/Title'
 import { useRouter } from 'next/navigation'
 import Designation from '@/app/components/about/Designation'
 import Service from '@/app/components/about/Service'
+import Testimonials from '@/app/components/about/Testimonials'
 
 
 export default function Page() {
@@ -38,7 +39,7 @@ export default function Page() {
 
       {/* Main content */}
       <div className="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm overflow-y-auto">
-        <div className="min-h-[1200px] p-8 md:p-16 text-white bg-[#111] relative">
+        <div className="min-h-[1200px] py-8 px-4 md:p-16 text-white bg-[#111] relative">
           <button
             onClick={handleClose}
             className="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors"
@@ -52,6 +53,7 @@ export default function Page() {
               handleImageLoad={handleImageLoad}
             />
             <Service/>
+            <Testimonials/>
           </div>
         </div>
       </div>
