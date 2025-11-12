@@ -32,7 +32,7 @@ export default function Testimonials() {
                                 <div className='flex justify-between items-center'>
                                     <div className='flex items-center gap-4'>
                                         <div>
-                                            <img src="/userIcon.png" className='w-12 h-12 rounded-full' alt="" />
+                                            <img src="/userIcon.png" className='w-10 h-10 rounded-full' alt="" />
                                         </div>
                                         <div>
                                             <h4>{t.name}</h4>
