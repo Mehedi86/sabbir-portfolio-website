@@ -6,6 +6,7 @@ import Title from '@/app/components/Title'
 import { useRouter } from 'next/navigation'
 import Qualification from '@/app/components/resume/Qualification'
 import Skills from '@/app/components/resume/Skills'
+import Office from '@/app/components/resume/Office'
 
 export default function ResumePage() {
   const [showWipe, setShowWipe] = useState(true)
@@ -46,7 +47,8 @@ export default function ResumePage() {
           <div>
             <Title title="Check out my Resume" subTitle="Resume" />
             <Qualification/> 
-            <Skills/>          
+            <Skills/>     
+            <Office />     
           </div>
         </div>
       </div>
