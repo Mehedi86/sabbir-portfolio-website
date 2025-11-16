@@ -152,3 +152,10 @@ body {
     0 100%
   );
 }
+
+
+/* skill animation */
+.skill-bar {
+  transition: width 1s ease;
+}
+

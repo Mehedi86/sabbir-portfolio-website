@@ -120,3 +120,12 @@ export const testimonials = [
     review: "Easy to use, reliable, and well-supported. It’s now part of my daily routine at work.",
   }
 ];
+
+export const skills = [
+  { title: "HTML/CSS", percent: 95 },
+  { title: "React JS", percent: 90 },
+  { title: "Web Design", percent: 80 },
+  { title: "Express.js", percent: 95 },
+  { title: "JavaScript", percent: 90 },
+  { title: "TypeScript", percent: 80 },
+];
