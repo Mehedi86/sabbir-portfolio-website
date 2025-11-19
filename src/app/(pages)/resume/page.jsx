@@ -34,7 +34,7 @@ export default function ResumePage() {
 
       {/* Resume Modal Section */}
       <div className="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm overflow-y-auto">
-        <div className="min-h-[1200px] p-2 lg:p-8 md:p-16 text-white bg-[#111] relative">
+        <div className="min-h-[1200px] py-8 px-4 md:p-16 text-white bg-[#111] relative">
           {/* Close button */}
           <button
             onClick={handleClose}
