@@ -46,7 +46,7 @@ body {
   background-image:
     linear-gradient(rgba(29, 29, 29, 0.5), rgba(20, 20, 20, 0.5)),
     /* black overlay with 50% opacity */
-    url('/hero-2.JPG');
+    url('/hero-2.webp');
   /* actual image */
   /* Cover entire area */
   background-size: cover;

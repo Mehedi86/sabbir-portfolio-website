@@ -64,7 +64,7 @@ export default function page() {
                     </button>
 
                     {/* Main Content */}
-                    <div className="max-w-6xl mx-auto">
+                    <div className="max-w-6xl mx-auto mt-4">
                         <Title subTitle="Portfolio" title="Showcasing some of my best work" />
 
                         {/* Tabs */}
