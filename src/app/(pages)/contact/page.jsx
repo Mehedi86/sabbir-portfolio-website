@@ -4,8 +4,9 @@ import Title from '@/app/components/Title'
 import React, { useEffect, useState } from 'react'
 import { FaTimes } from 'react-icons/fa';
 import { useRouter } from 'next/navigation'
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
-export default function page() {
+export default function Page() {
     const [showWipe, setShowWipe] = useState(true);
     const router = useRouter();
 
@@ -20,17 +21,17 @@ export default function page() {
     }
 
     return (
-
         <>
-            {/* Overlay wipe animation */}
-            < div
-                className={`fixed inset-0 z-50 bg-black transition-transform duration-1000 ease-in-out ${showWipe ? 'translate-y-0' : '-translate-y-full'
-                    }`
-                }
-            ></div >
-            {/* Resume Modal Section */}
+            {/* Wipe animation overlay */}
+            <div
+                className={`fixed inset-0 z-50 bg-black transition-transform duration-1000 ease-in-out
+                ${showWipe ? 'translate-y-0' : '-translate-y-full'}`}
+            ></div>
+
+            {/* Main section */}
             <div className="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm overflow-y-auto">
-                <div className="min-h-[1200px] py-8 px-4 md:p-16 text-white bg-[#111] relative">
+                <div className="min-h-[1200px] p-2 lg:p-8 md:p-16 text-white bg-[#111] relative">
+
                     {/* Close button */}
                     <button
                         onClick={handleClose}
@@ -42,31 +43,32 @@ export default function page() {
                     {/* Main content */}
                     <div className='mt-4'>
                         <Title subTitle="Get in Touch" title="Feel free to contact me anytimes" />
+
                         <div className="max-w-4xl mx-auto mt-10 text-white space-y-12">
 
-                            {/* Contact Top Text */}
                             <p className="text-center text-gray-400 max-w-2xl mx-auto leading-relaxed">
                                 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
                             </p>
 
-                            {/* Contact Container */}
+                            {/* 🔥 THE FIX — Proper 2-column grid */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-8">
 
-                                {/* Left Section — Contact Details */}
+                                {/* LEFT side */}
                                 <div className="space-y-6">
                                     <h3 className="text-2xl font-semibold">Contact Information</h3>
 
                                     <div className="space-y-4 text-gray-300">
+
                                         <p>
                                             <span className="font-semibold text-white">Email:</span><br />
-                                            <a href="mailto:your@email.com" className="hover:text-[#DCC5B2]">
-                                                your@email.com
+                                            <a href="mailto:test@email.com" className="hover:text-[#DCC5B2]">
+                                                test@email.com
                                             </a>
                                         </p>
 
                                         <p>
                                             <span className="font-semibold text-white">Phone:</span><br />
-                                            <a href="tel:+123456789" className="hover:text-[#DCC5B2]">
+                                            <a href="tel:+880123456789" className="hover:text-[#DCC5B2]">
                                                 +880 123 456 789
                                             </a>
                                         </p>
@@ -75,20 +77,28 @@ export default function page() {
                                             <span className="font-semibold text-white">Location:</span><br />
                                             Dhaka, Bangladesh 🇧🇩
                                         </p>
+
                                     </div>
 
-                                    {/* Socials */}
-                                    <div className="space-y-2">
-                                        <h3 className="text-2xl font-semibold">Follow Me</h3>
-                                        <div className="flex items-center gap-4 text-gray-400 text-xl">
-                                            <a href="#" className="hover:text-[#DCC5B2]">Facebook</a>
-                                            <a href="#" className="hover:text-[#DCC5B2]">LinkedIn</a>
-                                            <a href="#" className="hover:text-[#DCC5B2]">Instagram</a>
+                                    {/* Social Icons */}
+                                    <div className="space-y-3">
+                                        <h3 className="text-3xl font-bold tracking-wide">Follow Me</h3>
+
+                                        <div className="flex items-center gap-4 mt-2">
+                                            <a href="#" className="p-3 bg-[#181818] rounded-lg border border-gray-800 hover:border-[#DCC5B2] hover:text-[#DCC5B2] transition">
+                                                <FaFacebookF size={20} />
+                                            </a>
+                                            <a href="#" className="p-3 bg-[#181818] rounded-lg border border-gray-800 hover:border-[#DCC5B2] hover:text-[#DCC5B2] transition">
+                                                <FaLinkedinIn size={20} />
+                                            </a>
+                                            <a href="#" className="p-3 bg-[#181818] rounded-lg border border-gray-800 hover:border-[#DCC5B2] hover:text-[#DCC5B2] transition">
+                                                <FaInstagram size={20} />
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
 
-                                {/* Right Section — Contact Form */}
+                                {/* RIGHT side — Contact Form */}
                                 <div className="bg-[#181818] p-6 rounded-lg shadow-lg border border-gray-800">
                                     <form className="space-y-6">
 
@@ -129,9 +139,10 @@ export default function page() {
                                 </div>
 
                             </div>
-                        </div>
 
+                        </div>
                     </div>
+
                 </div>
             </div>
         </>

@@ -22,7 +22,7 @@ export default function Navbar() {
     <nav className='flex justify-between items-center px-6 lg:px-12 py-4 lg:py-8 text-stone-200 relative z-50'>
       {/* left side Title name */}
       <div className='flex items-center gap-2'>
-        <img src='/logo.jpg' className='w-10' />
+        <img src='/sabbir-logo.jfif' className='w-10' />
         <Link href="/"><h1 className='text-2xl font-semibold'>Sabbir</h1></Link>
       </div>
 

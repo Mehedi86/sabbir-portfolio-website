@@ -124,15 +124,22 @@ body {
 
 .fade-in {
   opacity: 0;
-  animation: fadeIn 3s forwards;
-  /* 2s for slow appearance */
+  animation: fadeInSmooth 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@keyframes fadeIn {
-  to {
+@keyframes fadeInSmooth {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    /* slight floating up */
+  }
+
+  100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
+
 
 
 /* resume education and experience timeline */
@@ -144,13 +151,11 @@ body {
   width: var(--w);
   height: var(--h);
   background: var(--c);
-  clip-path: polygon(
-    0 0,
-    calc(100% - 8px) 0,
-    100% 50%,
-    calc(100% - 8px) 100%,
-    0 100%
-  );
+  clip-path: polygon(0 0,
+      calc(100% - 8px) 0,
+      100% 50%,
+      calc(100% - 8px) 100%,
+      0 100%);
 }
 
 
@@ -158,4 +163,3 @@ body {
 .skill-bar {
   transition: width 1s ease;
 }
-
