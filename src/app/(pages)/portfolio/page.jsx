@@ -46,15 +46,14 @@ export default function page() {
         <>
             {/* Overlay wipe animation */}
             <div
-                className={`fixed inset-0 z-50 bg-black transition-transform duration-1000 ease-in-out ${
-                    showWipe ? 'translate-y-0' : '-translate-y-full'
-                }`}
+                className={`fixed inset-0 z-50 bg-black transition-transform duration-1000 ease-in-out ${showWipe ? 'translate-y-0' : '-translate-y-full'
+                    }`}
             ></div>
 
             {/* Modal Container */}
             <div className="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm overflow-y-auto">
                 <div className="min-h-[1200px] py-8 px-4 md:p-16 text-white bg-[#111] relative">
-                    
+
                     {/* Close Button */}
                     <button
                         onClick={handleClose}
@@ -64,8 +63,10 @@ export default function page() {
                     </button>
 
                     {/* Main Content */}
-                    <div className="max-w-6xl mx-auto mt-4">
-                        <Title subTitle="Portfolio" title="Showcasing some of my best work" />
+                    <div className="max-w-6xl mx-auto">
+                        <div className='w-1/2 mx-auto'>
+                            <Title subTitle="Portfolio" title="Showcasing some of my best work" />
+                        </div>
 
                         {/* Tabs */}
                         <div className="flex justify-center mt-6">
@@ -74,11 +75,10 @@ export default function page() {
                                     <button
                                         key={tab}
                                         onClick={() => setActiveTab(tab)}
-                                        className={`pb-1 transition-all ${
-                                            activeTab === tab
+                                        className={`pb-1 transition-all ${activeTab === tab
                                                 ? "text-[#DCC5B2] border-b-2 border-[#DCC5B2]"
                                                 : "text-neutral-400 hover:text-white cursor-pointer"
-                                        }`}
+                                            }`}
                                     >
                                         {tab}
                                     </button>

@@ -30,7 +30,7 @@ export default function Page() {
 
             {/* Main section */}
             <div className="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm overflow-y-auto">
-                <div className="min-h-[1200px] p-2 lg:p-8 md:p-16 text-white bg-[#111] relative">
+                <div className="min-h-[1200px] py-8 px-4 md:p-16 text-white bg-[#111] relative">
 
                     {/* Close button */}
                     <button
@@ -41,8 +41,10 @@ export default function Page() {
                     </button>
 
                     {/* Main content */}
-                    <div className='mt-4'>
-                        <Title subTitle="Get in Touch" title="Feel free to contact me anytimes" />
+                    <div>
+                        <div className='w-1/2 mx-auto'>
+                            <Title subTitle="Portfolio" title="Showcasing some of my best work" />
+                        </div>
 
                         <div className="max-w-4xl mx-auto mt-10 text-white space-y-12">
 
